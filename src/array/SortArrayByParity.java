@@ -1,4 +1,7 @@
+package array;
+
 /**
+ * NO.905
  * Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
  * You may return any answer array that satisfies this condition.
  *
@@ -8,7 +11,7 @@
  * @author DanielQSL
  * @date 2019/1/7
  */
-public class Solution {
+public class SortArrayByParity {
 
     /**
      * 思路一：

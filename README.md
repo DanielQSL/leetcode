@@ -9,9 +9,10 @@
 
 - 905.Sort Array By Parity
 
+## Linked List链表
+
+- 206.Reverse Linked List
 
 
-## Stack栈
 
-- 20.Valid-Parentheses
 
