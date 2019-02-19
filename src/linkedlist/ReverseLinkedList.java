@@ -1,8 +1,7 @@
 package linkedlist;
 
 /**
- * NO.206
- * Reverse a singly linked list.
+ * 206. Reverse a singly linked list.
  * 反转链表
  * Example:
  * <p>
@@ -28,7 +27,7 @@ public class ReverseLinkedList {
     }
 
     /**
-     * 解法一：
+     * 思路一：
      * 使用循环的方式。
      */
     class Solution {
