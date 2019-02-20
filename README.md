@@ -12,10 +12,17 @@
 - 26.Remove Duplicates from Sorted Array
 - 80.Remove Duplicates from Sorted Array II
 
+
 ## Linked List链表
 
 - 206.Reverse Linked List
 - 92.Reverse Linked List II
+
+
+## Binary Search二分查找
+- 278.First Bad Version
+- 35.Search Insert Position
+- 33.Search in Rotated Sorted Array
 
 
 
