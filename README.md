@@ -23,6 +23,10 @@
 - 278.First Bad Version
 - 35.Search Insert Position
 - 33.Search in Rotated Sorted Array
+- 81.Search in Rotated Sorted Array II
+
+## Tree树
+- 144.Binary Tree Preorder Traversal
 
 
 
