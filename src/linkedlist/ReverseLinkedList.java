@@ -16,8 +16,10 @@ package linkedlist;
  */
 public class ReverseLinkedList {
 
-    //Definition for singly-linked list.
-    public class ListNode {
+    /**
+     * Definition for singly-linked list.
+     */
+    public static class ListNode {
         int val;
         ListNode next;
 
@@ -29,19 +31,19 @@ public class ReverseLinkedList {
     /**
      * 思路一：
      * 使用循环的方式。
+     * 时间复杂度：O(n)，假设 n 是列表的长度，时间复杂度是 O(n)。
+     * 空间复杂度：O(1)。
      */
-    class Solution {
-        public ListNode reverseList(ListNode head) {
-            ListNode prev = null;
-            ListNode curr = head;
-            while (curr != null) {
-                ListNode nextTemp = curr.next;
-                curr.next=prev;
-                prev = curr;
-                curr = nextTemp;
-            }
-            return prev;
+    public ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
         }
+        return prev;
     }
 
 }
