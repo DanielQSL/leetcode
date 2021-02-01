@@ -26,6 +26,14 @@ public class ReverseLinkedList {
         ListNode(int x) {
             val = x;
         }
+
+        @Override
+        public String toString() {
+            return "ListNode{" +
+                    "val=" + val +
+                    ", next=" + next +
+                    '}';
+        }
     }
 
     /**
@@ -44,6 +52,27 @@ public class ReverseLinkedList {
             curr = nextTemp;
         }
         return prev;
+    }
+
+    /**
+     * 通过一个数组创建一个链表
+     * （测试链表程序的辅助工具方法）
+     *
+     * @param arr 数组
+     * @return 链表
+     */
+    public static ListNode createLinkedList(int[] arr) {
+        if (arr.length == 0) {
+            return null;
+        }
+        ListNode head = new ListNode(arr[0]);
+        ListNode current = head;
+        // 把这个迭代想象成一个动画去理解，就很好理解了
+        for (int i = 1; i < arr.length; i++) {
+            current.next = new ListNode(arr[i]);
+            current = current.next;
+        }
+        return head;
     }
 
 }
