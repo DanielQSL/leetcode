@@ -41,20 +41,25 @@ public class RemoveNthNodeFromEndOfList {
      * @return
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode fast = dummy;
-        ListNode slow = dummy;
+        ListNode dummyHead = new ListNode(0);
+        dummyHead.next = head;
+        // 快指针初始指向虚拟头结点
+        ListNode fast = dummyHead;
+        // 慢指针初始指向虚拟头结点
+        ListNode slow = dummyHead;
+        // 快指针先向前移动n+1步
         while (n > 0) {
             fast = fast.next;
             n--;
         }
+        // 快慢指针同时向前移动，直到快指针指向null
         while (fast.next != null) {
             fast = fast.next;
             slow = slow.next;
         }
+        // 慢指针的后继指针指向待删除节点的下一个节点
         slow.next = slow.next.next;
-        return dummy.next;
+        return dummyHead.next;
     }
 
 }
