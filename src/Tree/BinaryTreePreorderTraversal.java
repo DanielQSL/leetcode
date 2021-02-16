@@ -28,8 +28,14 @@ public class BinaryTreePreorderTraversal {
         TreeNode left;
         TreeNode right;
 
-        TreeNode(int x) {
-            val = x;
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
         }
     }
 
@@ -37,9 +43,6 @@ public class BinaryTreePreorderTraversal {
 
     /**
      * 思路一：递归
-     *
-     * @param root
-     * @return
      */
     public List<Integer> preorderTraversal(TreeNode root) {
         preOrder(root);
@@ -51,23 +54,17 @@ public class BinaryTreePreorderTraversal {
             return;
         }
         list.add(node.val);
-        if (node.left != null) {
-            preOrder(node.left);
-        }
-        if (node.right != null) {
-            preOrder(node.right);
-        }
+        preOrder(node.left);
+        preOrder(node.right);
     }
 
     /**
      * 思路二：非递归方式
      * 利用栈来存储节点
-     *
+     * <p>
      * Time:O(n)
-     * @param root
-     * @return
      */
-    public List<Integer> preorderTraversalTwo(TreeNode root) {
+    public List<Integer> preorderTraversalV2(TreeNode root) {
         if (root == null) {
             return list;
         }
