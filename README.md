@@ -7,8 +7,9 @@
 
 ## Array数组
 
-- 27.Remove Element
+- 27.移除元素
 - 26.删除排序数组中的重复项
+- 35.搜索插入位置
 - 80.Remove Duplicates from Sorted Array II
 - 277.Find the Celebrity
 - 905.Sort Array By Parity
@@ -23,6 +24,8 @@
 - 19.删除链表的倒数第 N 个结点
 - 876.链表的中间结点
 
+## String字符串
+- 125.验证回文串
 
 ## Binary Search二分查找
 - 278.First Bad Version

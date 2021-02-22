@@ -20,26 +20,24 @@ public class RemoveElement {
     /**
      * 思路：
      * Two pointer。We can keep two pointers ii and jj, where ii is the slow-runner while jj is the fast-runner.
-     *
+     * <p>
      * time:O(n)
      * space:O(1)
+     *
      * @param nums
      * @param val
      * @return
      */
     public int removeElement(int[] nums, int val) {
-        if (nums == null || nums.length == 0) {
-            return 0;
-        }
-
-        int count = 0;
-
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != val) {
-                nums[count++] = nums[i];
+        int slow = 0;
+        int fast = 0;
+        while (fast < nums.length) {
+            if (nums[fast] != val) {
+                nums[slow] = nums[fast];
+                slow++;
             }
+            fast++;
         }
-
-        return count;
+        return slow;
     }
 }
