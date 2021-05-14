@@ -27,10 +27,10 @@ public class LongestSubstringWithoutRepeatingCharacters {
         for (int start = 0, end = 0; end < n; end++) {
             char alpha = s.charAt(end);
             if (map.containsKey(alpha)) {
-                start = Math.max(map.get(alpha), start);
+                start = Math.max(map.get(alpha), start + 1);
             }
             result = Math.max(end - start + 1, result);
-            map.put(alpha, end + 1);
+            map.put(alpha, end);
         }
         return result;
     }
