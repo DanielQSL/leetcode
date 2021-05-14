@@ -3,10 +3,7 @@
 >
 > 注：以下编号均是Leetcode中的题目编号，该顺序为自己学习顺序。（代码中有详解）
 
-
-
 ## Array数组
-
 - 27.移除元素
 - 26.删除排序数组中的重复项
 - 35.搜索插入位置
@@ -14,9 +11,7 @@
 - 277.Find the Celebrity
 - 905.Sort Array By Parity
 
-
 ## Linked List链表
-
 - 206.反转链表
 - 92.反转链表2
 - 141.环形链表
@@ -26,6 +21,7 @@
 
 ## String字符串
 - 125.验证回文串
+- 3.无重复字符的最长子串
 
 ## Binary Search二分查找
 - 278.First Bad Version
