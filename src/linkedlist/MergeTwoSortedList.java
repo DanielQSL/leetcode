@@ -9,23 +9,6 @@ package linkedlist;
  */
 public class MergeTwoSortedList {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     /**
      * 递归法
      */
@@ -41,6 +24,31 @@ public class MergeTwoSortedList {
             l2.next = mergeTwoLists(l1, l2.next);
             return l2;
         }
+    }
+
+    /**
+     * 迭代法
+     * dummy为虚拟结点，相当于占位符，避免处理空指针的情况
+     */
+    public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(-1);
+        ListNode prev = dummy;
+
+        while (l1 != null && l2 != null) {
+            if (l1.val > l2.val) {
+                prev.next = l2;
+                l2 = l2.next;
+            } else {
+                prev.next = l1;
+                l1 = l1.next;
+            }
+            prev = prev.next;
+        }
+
+        // 合并后 l1 和 l2 最多只有一个还未被合并完，直接将链表末尾指向未合并完的链表即可
+        prev.next = l1 != null ? l1 : l2;
+
+        return dummy.next;
     }
 
 }
